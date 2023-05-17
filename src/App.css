@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --smokey-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-gray);
+}
+
+button {
+  height: 80px;
+  width: 80px;
+  background: var(--purple) url(../public/icon-arrow.svg) no-repeat center
+    center/cover;
+  border-radius: 50%;
+  border: 25px solid var(--purple);
+  cursor: pointer;
+  position: absolute;
+  bottom: -46px;
+  right: 0px;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--off-black);
+  border-color: var(--off-black);
+}
+
+.container {
+  border-radius: 20px;
+  border-bottom-right-radius: 130px;
+  max-width: 750px;
+  width: 90%;
+  margin: 150px auto;
+  padding: 50px;
+  background-color: var(--white);
+}
+
+form {
+  position: relative;
+}
+
+.form-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  border-bottom: 1px solid var(--smoke-gray);
+  margin-bottom: 40px;
+}
+
+.input-date {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+}
+
+.input-date span {
+  font-size: 12px;
+  color: var(--light-red);
+  margin-top: 5px;
+}
+
+.input-date label {
+  font-family: 'Poppins';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--smokey-gray);
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
+}
+
+.input-date label.label-error {
+  color: var(--light-red);
+}
+
+.input-date input {
+  height: 70px;
+  width: 150px;
+  border-radius: 10px;
+  border: 1px solid var(--light-gray);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  outline: none;
+}
+
+.input-date input.input-date-error {
+  border-color: var(--light-red);
+}
+
+.input-date input:hover,
+.input-date input:focus {
+  border-color: var(--purple);
+}
+
+.input-date input::placeholder {
+  color: var(--smokey-gray);
+}
+
+.input-date span {
+  opacity: 0;
+}
+
+.input-date span.span-error-visible {
+  opacity: 1;
+}
+
+.line-divider {
+  background-color: var(--light-gray);
+  padding: 1px;
+  translate: 0 10px;
+  margin-bottom: 50px;
+}
+
+.age-output {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.age-output div {
+  font-size: 85px;
+  line-height: 1.1;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.age-output div span {
+  color: var(--purple);
+}
+
+@media (max-width: 700px) {
+  button {
+    left: 50%;
+    translate: -50% 0;
+    height: 60px;
+    width: 60px;
+    border-width: 15px;
+  }
+
+  .container {
+    padding: 35px 25px;
+    margin: 60px auto;
+  }
+
+  .form-container {
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .input-date {
+    width: auto;
+  }
+
+  .input-date span {
+    font-size: 10px;
+  }
+
+  .input-date input {
+    width: 100%;
+    height: 55px;
+    font-size: 22px;
+    padding: 12px;
+  }
+
+  .input-date label {
+    letter-spacing: 2px;
+  }
+
+  .age-output div {
+    font-size: 50px;
+  }
+}
